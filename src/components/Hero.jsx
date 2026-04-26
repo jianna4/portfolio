@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="text-center">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Alex Kimani
+              Joan Wachuka Maina
             </span>
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-4">
