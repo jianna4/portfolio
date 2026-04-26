@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { EnvelopeIcon, GithubIcon, LinkedinIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -34,32 +35,32 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-600 dark:text-gray-300">Email</p>
-                  <a href="mailto:alex.kimani@example.com" className="text-blue-600 dark:text-blue-400 hover:underline">
-                    alex.kimani@example.com
+                  <a href="mailto:mainajoan555@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">
+                    mainajoan555@gmail.com
                   </a>
                 </div>
               </div>
               
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
-                  <GithubIcon className="w-6 h-6 text-blue-600" />
+                 {/* <GithubIcon className="w-6 h-6 text-blue-600" /> */}
                 </div>
                 <div>
                   <p className="text-gray-600 dark:text-gray-300">GitHub</p>
-                  <a href="https://github.com/alexkimani" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
-                    github.com/alexkimani
+                  <a href="https://github.com/jianna4" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                    github.com/jianna4
                   </a>
                 </div>
               </div>
               
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
-                  <LinkedinIcon className="w-6 h-6 text-blue-600" />
+                 {/* <LinkedinIcon className="w-6 h-6 text-blue-600" /> */}
                 </div>
                 <div>
                   <p className="text-gray-600 dark:text-gray-300">LinkedIn</p>
-                  <a href="https://linkedin.com/in/alexkimani" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
-                    linkedin.com/in/alexkimani
+                  <a href="https://linkedin.com/in/joan-maina-6306b4255/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                    linkedin.com/in/joan-maina-6306b4255/
                   </a>
                 </div>
               </div>
@@ -70,8 +71,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-600 dark:text-gray-300">Kaggle</p>
-                  <a href="https://kaggle.com/alexkimani" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
-                    kaggle.com/alexkimani
+                  <a href="https://kaggle.com/joanwachuka" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                    kaggle.com/joanwachuka
                   </a>
                 </div>
               </div>
