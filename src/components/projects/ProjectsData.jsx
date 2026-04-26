@@ -1,56 +1,48 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Spam Email Classifier",
-    description: "NLP-based spam detection system using Scikit-learn achieving 98% accuracy. Features email preprocessing, TF-IDF vectorization, and real-time classification.",
-    techStack: ["Python", "Scikit-learn", "Pandas", "NLP"],
-    githubUrl: "https://github.com/alexkimani/spam-classifier",
-    liveUrl: "https://spam-classifier-demo.herokuapp.com",
+    title: "Skin Disease Classifier",
+    description: "AI-powered skin disease detection system built with TensorFlow CNN, capable of analyzing images and providing accurate classifications for educational and research purpose.Won the 2024 KJUAT inteuniversity hackathon competition category AI in Health.",
+    techStack: ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy", "Matplotlib", "Gradio"],
+    githubUrl: "https://github.com/jianna4/skindisease-detector",
+    liveUrl: "https://jianna4-skin-disease-analyser.hf.space/",
     gradient: "from-green-500 to-teal-500"
   },
   {
     id: 2,
-    title: "House Price Prediction Model",
-    description: "Regression ML model predicting housing prices using advanced feature engineering and ensemble methods (Random Forest, XGBoost).",
-    techStack: ["Python", "Scikit-learn", "XGBoost", "Pandas", "Matplotlib"],
-    githubUrl: "https://github.com/alexkimani/house-price-prediction",
-    liveUrl: "https://house-price-predictor.streamlit.app",
+    title: "Kenya Sign Language Translator",
+    description: "A real-time system that translates Kenyan Sign Language (KSL) gestures to speech and converts speech to animated KSL signs using 3D hand models. Enables bidirectional communication between signers and non-signers, supporting accessibility and interactive learning.",
+    techStack: ["Python", "mediapipe", "OpenCV", "NumPy", "Matplotlib", "Gradio"],
+    githubUrl: "https://github.com/jianna4/Kenya-Sign-Language",
+    liveUrl: "https://huggingface.co/spaces/jianna4/KENYASIGNLANGUAGE",
     gradient: "from-blue-500 to-indigo-500"
   },
   {
     id: 3,
-    title: "Image Classification using CNN",
-    description: "Deep learning model for image recognition using TensorFlow and Keras. Achieved 92% accuracy on CIFAR-10 dataset.",
-    techStack: ["Python", "TensorFlow", "Keras", "NumPy", "OpenCV"],
-    githubUrl: "https://github.com/alexkimani/cnn-image-classifier",
+    title: "ChattySales - AI Sales Assistant",
+    description: "Whatsapp chatbot to process orders,see available stock.Askany question about the company,chattysales will answer",
+    techStack: ["Python", "Twilio", "Django"],
+    githubUrl: "https://github.com/jianna4/chattysales",
     liveUrl: null,
     gradient: "from-purple-500 to-pink-500"
   },
+  
   {
     id: 4,
-    title: "AI Chatbot with Hugging Face",
-    description: "Conversational AI chatbot using Hugging Face Transformers and GPT-2. Fine-tuned for task-oriented dialogues.",
-    techStack: ["Python", "Hugging Face", "Transformers", "PyTorch", "Gradio"],
-    githubUrl: "https://github.com/alexkimani/ai-chatbot",
-    liveUrl: "https://huggingface.co/spaces/alexkimani/ai-chatbot",
-    gradient: "from-yellow-500 to-orange-500"
+    title: "Data analysis with pandas",
+    description: "Data analysis and visualization project using pandas, Matplotlib, and Seaborn to explore trends and insights from a real-world dataset.",
+    techStack: ["Python", "pandas", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+    githubUrl: "https://www.kaggle.com/code/joanwachuka/data-analysis2",
+    liveUrl: null,
+    gradient: "from-blue-500 to-indigo-500"
   },
   {
     id: 5,
-    title: "FastAPI ML Model Deployment API",
-    description: "Production-ready ML inference API built with FastAPI, including model versioning, async endpoints, and monitoring.",
-    techStack: ["FastAPI", "Docker", "Python", "Pydantic", "Redis"],
-    githubUrl: "https://github.com/alexkimani/fastapi-ml-deployment",
+    title: "Wastewise - Smart Waste Management System",
+    description: "Full-stack web application to enable users to report and track waste disposal issues in their communities. Built with Django, it features user authentication, interactive maps, and a dashboard for monitoring waste management efforts.",
+    techStack: ["Django", "Python", "PostgreSQL", "React"],
+    githubUrl: "https://github.com/jianna4/Wastewise",
     liveUrl: null,
-    gradient: "from-green-500 to-emerald-500"
-  },
-  {
-    id: 6,
-    title: "Django ML Web App",
-    description: "Full-stack web application integrating ML predictions with user authentication, database storage, and REST API endpoints.",
-    techStack: ["Django", "Python", "PostgreSQL", "Bootstrap", "Celery"],
-    githubUrl: "https://github.com/alexkimani/django-ml-webapp",
-    liveUrl: "https://django-ml-app.herokuapp.com",
     gradient: "from-red-500 to-rose-500"
   }
 ];
