@@ -1,5 +1,9 @@
 import React from 'react';
-import { GithubIcon, ExternalLinkIcon } from '@heroicons/react/24/outline';
+
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+
+// Then in the button:
+<ArrowTopRightOnSquareIcon className="w-4 h-4" />
 
 const ProjectCard = ({ project }) => {
   const { title, description, techStack, githubUrl, liveUrl, gradient } = project;
@@ -45,7 +49,7 @@ const ProjectCard = ({ project }) => {
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
           >
-            <GithubIcon className="w-4 h-4" />
+            {/* <GithubIcon className="w-4 h-4" /> */}
             Code
           </a>
           {liveUrl && (
@@ -55,7 +59,7 @@ const ProjectCard = ({ project }) => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
-              <ExternalLinkIcon className="w-4 h-4" />
+              <ArrowTopRightOnSquareIcon  className="w-4 h-4" />
               Live Demo
             </a>
           )}
