@@ -6,8 +6,7 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
-import Contact from './components/contact';
-
+import Contact from './components/Contacts';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
