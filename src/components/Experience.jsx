@@ -3,29 +3,25 @@ import React from 'react';
 const Experience = () => {
   const experiences = [
     {
-      title: "ML Engineer Intern (Remote)",
-      organization: "AI Startup",
-      period: "2024 - Present",
-      description: "Building and deploying ML models for customer analytics. Implementing FastAPI endpoints for real-time predictions."
+      title: "Software developer Intern (Remote)",
+      organization: "Affam limited",
+      period: "2025 May - 2025 September",
+      description: "Building RAG systems for customer use. Implementing django backend services for multiple applications.Doing analytics work.Also got to lern frontendin the process"
     },
+    {
+    title: "Hackathon Projects",
+    organization: "Team-Based",
+    period: "2024 - Present",
+    description: "Participated in 4 competitive hackathons, winning 2. Built AI-driven solutions across computer vision, AR/VR, and applied machine learning. Notable projects include a CNN-based model for image classification at the KJUAT Inter-University Hackathon, and an AR/VR solution for speech-to-sign language translation at Origin Labs in DeKUT. Also contributed to AI-focused prototypes and startup-oriented solutions, delivering working demos and pitching ideas to judges. Strong experience in rapid prototyping, teamwork, and building functional products under tight deadlines."
+},
     {
       title: "Self-directed ML Projects",
-      organization: "Personal Portfolio",
+      organization: "Independent",
       period: "2023 - Present",
-      description: "Developed 6+ ML projects including NLP, computer vision, and deployment APIs. Published code on GitHub."
-    },
-    {
-      title: "ML Coursework",
-      organization: "Coursera / DeepLearning.AI",
-      period: "2022 - 2024",
-      description: "Completed Specializations in Deep Learning, MLOps, and NLP. Hands-on experience with TensorFlow and PyTorch."
-    },
-    {
-      title: "API Development Experience",
-      organization: "FastAPI & Django",
-      period: "2023 - Present",
-      description: "Built production-ready REST APIs for ML models including authentication, asynchronous processing, and containerization."
-    }
+       description: "Designed and developed 6+ end-to-end machine learning applications across NLP and computer vision using Python, TensorFlow/PyTorch, and FastAPI. Built full pipelines including data preprocessing, model training, evaluation, and deployment as REST APIs. Focused on writing clean, maintainable code and optimizing models for real-world inference. All projects are version-controlled and available on GitHub."
+   },
+   
+    
   ];
 
   return (

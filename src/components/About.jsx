@@ -7,7 +7,7 @@ const About = () => {
         <h2 className="section-title">About Me</h2>
         <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
           <p>
-            I'm a Computer Science graduate with a deep passion for Artificial Intelligence and Machine Learning. 
+            I'm a Computer Science student with a deep passion for Artificial Intelligence and Machine Learning. 
             My journey into AI began during my university years, where I discovered the incredible potential of 
             data-driven systems to solve real-world problems.
           </p>
