@@ -1,7 +1,7 @@
 import React from 'react';
 // Import your image at the top
 //import myPhoto from './assets/joan-photo.jpg'; // Adjust path based on where your image is
-import myPhoto from '../assets/images/profile.jpeg';
+
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center pt-16">
@@ -41,7 +41,7 @@ const Hero = () => {
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl ring-4 ring-blue-500/20">
               <img
-                src={myPhoto}  // Use the imported image here
+                src="profile.jpeg"  // Use the imported image here
                 alt="Joan Wachuka Maina"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
               />

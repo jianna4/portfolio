@@ -1,9 +1,5 @@
 
-import cnn from '../../assets/images/cnn.png';
-import wastewise from '../../assets/images/wastewise.jpeg';
-import chattysalesImage from '../../assets/images/chattysales.jpeg';
-import ksl from '../../assets/images/ksl.png';
-import dataanalysis from '../../assets/images/dataanal.png';
+
 export const projectsData = [
   {
     id: 1,
@@ -12,7 +8,7 @@ export const projectsData = [
     techStack: ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy", "Matplotlib", "Gradio"],
     githubUrl: "https://github.com/jianna4/skindisease-detector",
     liveUrl: "https://jianna4-skin-disease-analyser.hf.space/",
-    image: cnn
+    image: '/cnn.PNG',
   },
   {
     id: 2,
@@ -21,7 +17,7 @@ export const projectsData = [
     techStack: ["Python", "mediapipe", "OpenCV", "NumPy", "Matplotlib", "Gradio"],
     githubUrl: "https://github.com/jianna4/Kenya-Sign-Language",
     liveUrl: "https://huggingface.co/spaces/jianna4/KENYASIGNLANGUAGE",
-    image: ksl
+    image: "ksl.PNG"
   },
   {
     id: 3,
@@ -30,7 +26,7 @@ export const projectsData = [
     techStack: ["Python", "Twilio", "Django"],
     githubUrl: "https://github.com/jianna4/chattysales",
     liveUrl: null,
-    image: chattysalesImage
+    image: "chattysales.jpeg"
   },
   
   {
@@ -40,7 +36,7 @@ export const projectsData = [
     techStack: ["Python", "pandas", "Matplotlib", "Seaborn", "Jupyter Notebook"],
     githubUrl: "https://www.kaggle.com/code/joanwachuka/data-analysis2",
     liveUrl: null,
-    image: dataanalysis
+    image: "dataanal.PNG"
   },
   {
     id: 5,
@@ -49,6 +45,6 @@ export const projectsData = [
     techStack: ["Django", "Python", "PostgreSQL", "React"],
     githubUrl: "https://github.com/jianna4/Wastewise",
     liveUrl: null,
-    image: wastewise
+    image: "wastewise.jpeg"
   }
 ];
