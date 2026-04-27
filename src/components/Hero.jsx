@@ -11,7 +11,7 @@ const Hero = () => {
           {/* Left side - Text Content */}
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className=" bg-blue-600  bg-clip-text text-transparent">
                 Joan Wachuka Maina
               </span>
             </h1>
@@ -24,7 +24,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
                 href="#projects"
-                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl text-center"
+                className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl text-center"
               >
                 View Projects
               </a>
