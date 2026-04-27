@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { EnvelopeIcon, ChartBarIcon } from '@heroicons/react/24/outline';
-
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +21,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title">Get In Touch</h2>
         
@@ -30,48 +30,48 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                   <EnvelopeIcon className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <p className="text-gray-600 dark:text-gray-300">Email</p>
-                  <a href="mailto:mainajoan555@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  <p className="text-gray-600">Email</p>
+                  <a href="mailto:mainajoan555@gmail.com" className="text-blue-600 hover:underline">
                     mainajoan555@gmail.com
                   </a>
                 </div>
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
-                 {/* <GithubIcon className="w-6 h-6 text-blue-600" /> */}
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <FaGithub className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <p className="text-gray-600 dark:text-gray-300">GitHub</p>
-                  <a href="https://github.com/jianna4" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  <p className="text-gray-600">GitHub</p>
+                  <a href="https://github.com/jianna4" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                     github.com/jianna4
                   </a>
                 </div>
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
-                 {/* <LinkedinIcon className="w-6 h-6 text-blue-600" /> */}
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <FaLinkedin className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <p className="text-gray-600 dark:text-gray-300">LinkedIn</p>
-                  <a href="https://linkedin.com/in/joan-maina-6306b4255/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  <p className="text-gray-600">LinkedIn</p>
+                  <a href="https://linkedin.com/in/joan-maina-6306b4255/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                     linkedin.com/in/joan-maina-6306b4255/
                   </a>
                 </div>
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                   <ChartBarIcon className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <p className="text-gray-600 dark:text-gray-300">Kaggle</p>
-                  <a href="https://kaggle.com/joanwachuka" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  <p className="text-gray-600">Kaggle</p>
+                  <a href="https://kaggle.com/joanwachuka" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                     kaggle.com/joanwachuka
                   </a>
                 </div>
@@ -81,7 +81,7 @@ const Contact = () => {
             {/* Contact Form */}
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-700">
                   Name
                 </label>
                 <input
@@ -91,12 +91,12 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-700">
                   Email
                 </label>
                 <input
@@ -106,12 +106,12 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                <label htmlFor="message" className="block text-sm font-medium mb-2 text-gray-700">
                   Message
                 </label>
                 <textarea
@@ -121,7 +121,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 ></textarea>
               </div>
               

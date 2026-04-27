@@ -3,9 +3,9 @@ import React from 'react';
 const skillsData = {
   "Programming Languages": ["Python", "JavaScript", "SQL"],
   "Machine Learning / AI": ["Scikit-learn", "TensorFlow", "PyTorch", "Pandas", "NumPy", "Hugging Face"],
-  "Backend / ML Deployment": ["FastAPI", "Django", "REST APIs", "Model deployment basics"],
-  "Data Visualization & Tools": ["Matplotlib", "Seaborn", "Jupyter Notebook", "Git & GitHub", "Linux"],
-  "Frontend (supporting skills)": ["React", "Tailwind CSS"]
+  "Backend / ML Deployment": ["FastAPI", "Django", "Docker", "REST APIs", "Model deployment basics"],
+  "Data Visualization & Tools": ["Matplotlib", "Seaborn", "Jupyter Notebook", "Git & GitHub"],
+  "Frontend (supporting skills)": ["React", "Tailwind CSS","Gradio","Streamlit"],
 };
 
 const Skills = () => {
@@ -16,14 +16,14 @@ const Skills = () => {
         <div className="space-y-8">
           {Object.entries(skillsData).map(([category, skills]) => (
             <div key={category}>
-              <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">
                 {category}
               </h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-all duration-200 cursor-default"
+                    className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:scale-105 hover:bg-blue-100 hover:text-blue-700 transition-all duration-200 cursor-default"
                   >
                     {skill}
                   </span>

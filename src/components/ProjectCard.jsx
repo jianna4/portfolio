@@ -1,15 +1,12 @@
 import React from 'react';
-
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
-
-// Then in the button:
-<ArrowTopRightOnSquareIcon className="w-4 h-4" />
+import { FaGithub } from 'react-icons/fa';
 
 const ProjectCard = ({ project }) => {
   const { title, description, techStack, githubUrl, liveUrl, gradient } = project;
 
   return (
-    <div className="group relative bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+    <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
       {/* Gradient Thumbnail */}
       <div className={`h-48 bg-gradient-to-r ${gradient} relative overflow-hidden`}>
         <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
@@ -22,10 +19,10 @@ const ProjectCard = ({ project }) => {
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">
+        <h3 className="text-xl font-bold mb-2 text-gray-800">
           {title}
         </h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+        <p className="text-gray-600 mb-4 line-clamp-3">
           {description}
         </p>
 
@@ -34,7 +31,7 @@ const ProjectCard = ({ project }) => {
           {techStack.map((tech) => (
             <span
               key={tech}
-              className="px-2 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-md"
+              className="px-2 py-1 text-xs font-medium bg-gray-100 rounded-md"
             >
               {tech}
             </span>
@@ -47,9 +44,9 @@ const ProjectCard = ({ project }) => {
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
           >
-            {/* <GithubIcon className="w-4 h-4" /> */}
+            <FaGithub className="w-4 h-4" />
             Code
           </a>
           {liveUrl && (
@@ -59,7 +56,7 @@ const ProjectCard = ({ project }) => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
-              <ArrowTopRightOnSquareIcon  className="w-4 h-4" />
+              <ArrowTopRightOnSquareIcon className="w-4 h-4" />
               Live Demo
             </a>
           )}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 // These are correct - no changes needed
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -38,7 +38,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             href="#home"
             className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
           >
-            ML Portfolio
+            Joan
           </a>
 
           {/* Desktop Menu */}
@@ -52,26 +52,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 {link.name}
               </a>
             ))}
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-            >
-              {darkMode ? (
-                <SunIcon className="w-5 h-5" />
-              ) : (
-                <MoonIcon className="w-5 h-5" />
-              )}
-            </button>
+           
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800"
-            >
-              {darkMode ? <SunIcon className="w-5 h-5" /> : <MoonIcon className="w-5 h-5" />}
-            </button>
+            
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800"
