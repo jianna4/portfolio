@@ -1,24 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-// These are correct - no changes needed
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home'); // Track active section
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '#home', id: 'home' },
+    { name: 'About', href: '#about', id: 'about' },
+    { name: 'Skills', href: '#skills', id: 'skills' },
+    { name: 'Projects', href: '#projects', id: 'projects' },
+    { name: 'Experience', href: '#experience', id: 'experience' },
+    { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+      
+      // Track which section is in view
+      const sections = navLinks.map(link => link.id);
+      const scrollPosition = window.scrollY + 100; // Offset for navbar
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetBottom = offsetTop + element.offsetHeight;
+          
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -27,12 +45,12 @@ const Navbar = () => {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
+          ? 'bg-white/80 dark:bg-gray-100/80 backdrop-blur-md shadow-sm'
+          : 'bg-white/50 dark:bg-gray-100/50 backdrop-blur-sm'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-2">
           {/* Logo */}
           <a
             href="#home"
@@ -42,22 +60,29 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                className={`relative px-3 py-2 transition-all duration-300 ${
+                  activeSection === link.id
+                    ? 'text-blue-600 dark:text-blue-400' // Active text color
+                    : 'hover:text-blue-600 dark:hover:text-blue-400'
+                }`}
               >
                 {link.name}
+                
+                {/* Underline for active link */}
+                {activeSection === link.id && (
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400 rounded-full animate-slide-in" />
+                )}
               </a>
             ))}
-           
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
-            
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800"
@@ -74,8 +99,15 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                onClick={() => {
+                  setIsOpen(false);
+                  setActiveSection(link.id);
+                }}
+                className={`block py-3 px-4 rounded-lg transition-all duration-300 ${
+                  activeSection === link.id
+                    ? 'bg-blue-600 text-white' // Blue rounded background for mobile active
+                    : 'hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400'
+                }`}
               >
                 {link.name}
               </a>
