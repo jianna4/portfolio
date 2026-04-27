@@ -3,15 +3,20 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import { FaGithub } from 'react-icons/fa';
 
 const ProjectCard = ({ project }) => {
-  const { title, description, techStack, githubUrl, liveUrl, gradient } = project;
+  const { title, description, techStack, githubUrl, liveUrl, image } = project; // Changed from 'gradient' to 'image'
 
   return (
     <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
-      {/* Gradient Thumbnail */}
-      <div className={`h-48 bg-gradient-to-r ${gradient} relative overflow-hidden`}>
-        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+      {/* Image Thumbnail */}
+      <div className="h-48 relative overflow-hidden bg-gray-100">
+        <img 
+          src={image} 
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
         <div className="absolute bottom-4 left-4">
-          <span className="text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-full">
+          <span className="text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">
             ML Project
           </span>
         </div>
@@ -31,7 +36,7 @@ const ProjectCard = ({ project }) => {
           {techStack.map((tech) => (
             <span
               key={tech}
-              className="px-2 py-1 text-xs font-medium bg-gray-100 rounded-md"
+              className="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors"
             >
               {tech}
             </span>
